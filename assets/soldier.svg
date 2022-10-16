@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.518" height="21" viewBox="0 0 17.518 21">
+  <g id="Group_27" data-name="Group 27" transform="translate(-681.482 -876)">
+    <g id="Group_25" data-name="Group 25" transform="translate(687 876)">
+      <rect id="Rectangle_22" data-name="Rectangle 22" width="7" height="12" rx="3.5" transform="translate(3 9)" fill="#007a18"/>
+      <g id="Group_23" data-name="Group 23">
+        <circle id="Ellipse_7" data-name="Ellipse 7" cx="6" cy="6" r="6" transform="translate(0)" fill="#b99b7d"/>
+        <path id="Subtraction_2" data-name="Subtraction 2" d="M4.464,0H.514A6,6,0,0,0,6,8.434a5.984,5.984,0,0,0,5.965-5.355H5.848L4.464,0Z" transform="translate(11.965 8.434) rotate(180)" fill="#088408"/>
+      </g>
+    </g>
+    <g id="Group_26" data-name="Group 26" transform="matrix(0.978, 0.208, -0.208, 0.978, 213.121, -121.958)">
+      <rect id="Rectangle_23" data-name="Rectangle 23" width="15" height="1" transform="translate(668 889)"/>
+      <rect id="Rectangle_24" data-name="Rectangle 24" width="1" height="3" transform="matrix(0.966, -0.259, 0.259, 0.966, 677.629, 889.759)"/>
+      <rect id="Rectangle_25" data-name="Rectangle 25" width="1" height="5" transform="translate(675.188 889.031) rotate(21)"/>
+    </g>
+  </g>
+</svg>

@@ -11,7 +11,10 @@ class Game {
   worldOrigin = {x: 0, y: 0}
 
   instance = null
-  
+
+  scoreUI = null
+  lifeUI = null
+
   //sington pattern
   static getInstance() {
     if (!Game.instance) {
@@ -19,7 +22,6 @@ class Game {
     }
     return Game.instance
   }
-
 
   constructor() {
     this.mapSize.width = dom.app.offsetWidth
@@ -34,11 +36,15 @@ class Game {
       aircraft.update()
       this.enemies.forEach(e => e.update())
       requestAnimationFrame(this.update)
+      this.scoreUI.innerText = this.score
+      this.lifeUI.innerText = this.life
     }
   }
 
   start() {
     this.playing = true
+    this.scoreUI = document.getElementById('score')
+    this.lifeUI = document.getElementById('life')
     // this.enemies = [...enemies]
   }
 

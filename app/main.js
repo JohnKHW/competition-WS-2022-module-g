@@ -4,7 +4,8 @@ const dom = {
   floor: $('.floor'),
 }
 
-const updateConsumer =[];
+const keyPressed = {
+}
 
 const aircraft = new Aircraft()
 
@@ -12,3 +13,10 @@ const game = new Game({
   aircraft,
 })
 
+window.addEventListener('keydown', e => {
+  keyPressed[e.key] = true
+})
+
+window.addEventListener('keyup', e => {
+  keyPressed[e.key] = false
+})

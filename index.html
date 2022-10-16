@@ -9,11 +9,28 @@
   </head>
   <body>
     <div class="app">
+      <div id="ui">
+        <div class="score">
+          <span>Score: </span>
+          <span id="score"></span>
+        </div>
+        <div class="score">
+          <span>Life: </span>
+          <span id="life"></span>
+        </div>
+      </div>
       <div id="aircraft" class="aircraft">
-        <img class="propeller" src="./assets/propeller.svg">
-        <img class="plane-svg" src="./assets/plane.svg" alt="" srcset="">
+        <div class="aircraft-inner">
+          <img class="propeller" src="./assets/propeller.svg" />
+          <img class="plane-svg" src="./assets/plane.svg" alt="" srcset="" />
+        </div>
+      </div>
+      <div id="battle-field">
+
+        <div class="tank"></div>
       </div>
 
+      <div id="particles"></div>
       <div id="floor" class="floor"></div>
     </div>
 
