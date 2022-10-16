@@ -45,9 +45,10 @@ class AirCraftBomb {
   y = 0
   speed = 3
   el = document.createElement('div')
-  constructor({x, y}) {
+  constructor({x, y, onRemove}) {
     this.x = x
     this.y = y
+    this.onRemove = onRemove
 
     this.el.classList.add('bomb')
     document.getElementById('battle-field').appendChild(this.el)
@@ -56,8 +57,9 @@ class AirCraftBomb {
   update() {
     console.log(this.y)
     if (this.y > 600) {
+      this.onRemove()
       this.el.remove()
-      
+
       return
     }
     this.y += this.speed

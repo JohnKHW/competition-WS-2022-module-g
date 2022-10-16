@@ -1,5 +1,12 @@
-class Enemy {
+class Tank {
+  life = 20
   fires = []
+  tankId = null
+  constructor(game, id) {
+    this.game = game
+    this.tankId = id
+    this.dom = document.getElementById(id)
+  }
   isDead() {
     return this.life <= 0
   }
@@ -8,19 +15,6 @@ class Enemy {
   }
 
   update() {
-    this.fires.forEach(e => {
-      e.update()
-    })
+    this.dom.style.transform = `translateX(${-this.game.x}px)`
   }
-}
-
-class Soldier extends Enemy {
-  life = 1
-
-  constructor() {}
-}
-
-class Tank extends Enemy {
-  life = 20
-  constructor() {}
 }

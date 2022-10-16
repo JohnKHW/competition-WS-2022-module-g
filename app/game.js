@@ -15,27 +15,25 @@ class Game {
   scoreUI = null
   lifeUI = null
 
-  //sington pattern
-  static getInstance() {
-    if (!Game.instance) {
-      Game.instance = new Game()
-    }
-    return Game.instance
-  }
-
   constructor() {
     this.mapSize.width = dom.app.offsetWidth
     this.mapSize.height = dom.app.offsetHeight
 
+    this.enemies = [new Tank(this,'tank-1'), new Tank(this,'tank-2'), new Tank(this,'tank-3')]
     this.start()
     this.update()
   }
 
   update = () => {
     if (this.playing) {
+      this.x++
+
       aircraft.update()
       this.enemies.forEach(e => e.update())
       requestAnimationFrame(this.update)
+
+      dom.app.style.backgroundPositionX = -this.x + 'px'
+
       this.scoreUI.innerText = this.score
       this.lifeUI.innerText = this.life
     }
@@ -46,6 +44,9 @@ class Game {
     this.scoreUI = document.getElementById('score')
     this.lifeUI = document.getElementById('life')
     // this.enemies = [...enemies]
+    for (let i = 0; i < 3; i++) {
+      const newTank = new Tank(this,i + 1)
+    }
   }
 
   pause() {

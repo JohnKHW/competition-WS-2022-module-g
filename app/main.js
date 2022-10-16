@@ -4,15 +4,11 @@ const dom = {
   floor: $('.floor'),
 }
 
-const keyPressed = {
-}
+const keyPressed = {}
 
 const aircraft = new Aircraft()
 
-const game = new Game({
-  aircraft,
-})
-
+const game = new Game()
 window.addEventListener('keydown', e => {
   keyPressed[e.key] = true
 })

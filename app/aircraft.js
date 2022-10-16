@@ -28,10 +28,16 @@ class Aircraft {
         case ' ':
           if (Date.now() - this.times.lastBomb > 1000) {
             this.times.lastBomb = Date.now()
+
+            const id = Date.now()
             this.fires.push(
               new AirCraftBomb({
+                id,
                 x: this.offset.x + 50,
                 y: this.y.prev + this.offset.y + 30,
+                onRemove: () => {
+                  this.fires = this.fires.filter(f => f.id !== id)
+                },
               }),
             )
           }
