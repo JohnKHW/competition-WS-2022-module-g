@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.app {
+  position: relative;
+  width: 1000px;
+  height: 560px;
+  background: #aaa;
+}
+
+.aircraft {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 100px;
+  height: 50px;
+  background: #000;
+}
+
+.floor {
+}
+
+.tank {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #000;
+}
+
+.soldier {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background: #000;
+}
+
+.soldier .gun {
+}
+.soldier-fire {
+}
