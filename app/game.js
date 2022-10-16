@@ -21,8 +21,8 @@ class Game {
 
     this.enemies = [
       new Tank(this, 'tank-1', 200),
-      new Tank(this, 'tank-2', 400),
-      new Tank(this, 'tank-3', 600),
+      new Tank(this, 'tank-2', 500),
+      new Tank(this, 'tank-3', 1000),
     ]
     this.start()
     this.update()
