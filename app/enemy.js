@@ -2,9 +2,10 @@ class Tank {
   life = 20
   fires = []
   tankId = null
-  constructor(game, id) {
+  constructor(game, id, baseX) {
     this.game = game
     this.tankId = id
+    this.baseX = baseX
     this.dom = document.getElementById(id)
   }
   isDead() {
@@ -15,6 +16,6 @@ class Tank {
   }
 
   update() {
-    this.dom.style.transform = `translateX(${-this.game.x}px)`
+    this.dom.style.transform = `translateX(${this.baseX + -this.game.x}px)`
   }
 }

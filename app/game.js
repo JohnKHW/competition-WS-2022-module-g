@@ -19,7 +19,11 @@ class Game {
     this.mapSize.width = dom.app.offsetWidth
     this.mapSize.height = dom.app.offsetHeight
 
-    this.enemies = [new Tank(this,'tank-1'), new Tank(this,'tank-2'), new Tank(this,'tank-3')]
+    this.enemies = [
+      new Tank(this, 'tank-1', 200),
+      new Tank(this, 'tank-2', 400),
+      new Tank(this, 'tank-3', 600),
+    ]
     this.start()
     this.update()
   }
@@ -43,10 +47,6 @@ class Game {
     this.playing = true
     this.scoreUI = document.getElementById('score')
     this.lifeUI = document.getElementById('life')
-    // this.enemies = [...enemies]
-    for (let i = 0; i < 3; i++) {
-      const newTank = new Tank(this,i + 1)
-    }
   }
 
   pause() {
